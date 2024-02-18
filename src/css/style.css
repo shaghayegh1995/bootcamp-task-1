@@ -1,0 +1,134 @@
+/* reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* root variable */
+:root {
+  
+    --color-btn: #219F95;
+    --color-text: #696969 ; 
+    --color-badge:#AFCEDD;
+    --color-header: #1E1E1E;
+    --color-badge-text: #234894;
+    --color-white: #fff;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  h1,h2,h3{
+    color: var(--color-header)
+  }
+  h1{
+    font-size: 2.2rem;
+    font-weight: 900;
+  margin: 5rem;
+  margin-bottom: 0;
+  }
+  /* section */
+  .section {
+    background-color: var(--color-white);
+    max-width: 1140px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid orange;
+    padding: 1.5rem;
+  }
+  .section--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem;
+    gap: 5rem;
+  }
+.item{
+  padding: 1rem 0.5rem;
+  min-width: 300px;
+  /* background-color: #ccc; */
+}
+@media screen and (min-width: 728px) {
+  .section--items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    .item{
+max-width: fit-content;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section--items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+/* badge */
+.badge{
+  background-color: var(--color-badge);
+  font-size: 1.2rem;
+  border-radius: 6px;
+  text-align: right;
+  padding: 0.5rem 1.3rem;
+  outline: 0;
+}
+.item__heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.item__badge{
+display: inline-flex;
+}
+
+ .item__badge  p {
+  font-size: 1.6rem;
+  color:var(--color-badge-text);
+  font-weight: 600px;
+  padding-right: 0.5rem; 
+} 
+.section--box h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+ .text{ 
+  font-size: 1.2rem;
+  color:var(--color-text);
+  font-weight: 400px;
+ } 
+img {
+  border-radius: 8px;
+  width: 40px;
+ height: 40px;
+ margin-top: 1rem;
+ padding-left: 0.5rem;
+}
+.personalinfo {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+.personalinfo h3{
+  font-size: 1.6rem;
+}
+.btn{
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  white-space: nowrap;
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: var(--color-btn);
+  color: var(--color-white);
+}
+.item__ending{
+  display: flex;
+  justify-content: space-between;
+}
+
